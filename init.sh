@@ -1,4 +1,4 @@
-sudo apt install -y konsole cmake python3-dev vim zsh universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common xcape;
+sudo apt install -y zsh konsole cmake python3-dev vim universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common xcape;
 cd ~
 mkdir Data;
 # Install Ohmyzsh
