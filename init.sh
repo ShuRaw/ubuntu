@@ -1,11 +1,12 @@
-sudo apt install -y konsole vim zsh universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common;
+sudo apt install -y konsole cmake python3-dev vim zsh universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common xcape;
+cd ~
 mkdir Data;
 # Install Ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 # Installing fonts
 mkdir Installer && cd Installer;
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git && \
-cd nerd-fonts && ./install.py FiraCode && cd;
+cd nerd-fonts && ./install.sh FiraCode && cd;
 # Install tmuxinator
 sudo gem install tmuxinator
 # Install tmux plugin manager
@@ -24,3 +25,5 @@ sudo usermod -aG docker ${USER} && \
 # Installing Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
 sudo chmod +x /usr/local/bin/docker-compose;
+cd ~ && git clone https://github.com/ShuRaw/dotfiles.git && cd dotfiles && \
+python3 config.py
