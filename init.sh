@@ -1,4 +1,7 @@
-sudo apt install -y zsh konsole cmake python3-dev vim universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common xcape;
+sudo add-apt-repository ppa:jonathonf/vim && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y;
+sudo apt install -y zsh konsole cmake python3-dev vim bat silversearcher-ag universal-ctags vim-gtk3 curl ruby-full tmux apt-transport-https ca-certificates nodejs npm software-properties-common xcape xclip;
+# Setting up bat executable
+mkdir -p ~/.local/bin && ln -s /usr/bin/batcat ~/.local/bin/bat;
 cd ~
 mkdir Data;
 # Install Ohmyzsh
